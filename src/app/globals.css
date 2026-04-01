@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Theme tokens: light/dark switched via class on <html> (next-themes).
+  RGB triplets for Tailwind alpha modifier support.
+*/
+:root {
+  --background: 250 250 252;
+  --foreground: 15 23 42;
+  --surface: 255 255 255;
+  --surface-muted: 241 245 249;
+  --accent: 99 102 241;
+  --accent-dim: 129 140 248;
+  --grid-line: 148 163 184;
+  --glass-border: 255 255 255;
+  --glow: 99 102 241;
+}
+
+.dark {
+  --background: 8 10 18;
+  --foreground: 226 232 240;
+  --surface: 18 22 35;
+  --surface-muted: 30 36 52;
+  --accent: 129 140 248;
+  --accent-dim: 99 102 241;
+  --grid-line: 51 65 85;
+  --glass-border: 255 255 255;
+  --glow: 129 140 248;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased text-slate-900 dark:text-slate-200;
+  background-color: rgb(var(--background));
+}
+
+/* Custom selection */
+::selection {
+  @apply bg-accent/30 text-foreground;
+}
