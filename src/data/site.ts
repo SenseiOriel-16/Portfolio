@@ -13,9 +13,9 @@ export const site = {
     email: "mailto:orielalde9@gmail.com",
   },
   /** Hero column image (right on desktop). Use `/images/your-photo.jpg` in `public/images/`. Falls back to `about.portrait` if empty. */
-  heroImage: "/src/assets/images/profile.jpg",
+  heroImage: "/public/images/profile.jpg",
   about: {
-    portrait: "",
+    portrait: "/public/images/profile.jpg",
     intro:
       "I’m Oriel, a Computer Science student who enjoys building reliable, user-friendly software. I’ve worked on web and app projects where I contribute to layout and UI, data handling, and turning requirements into working features—often collaborating with a team and coordinating with stakeholders to keep things clear and on track.",
     highlights: [
