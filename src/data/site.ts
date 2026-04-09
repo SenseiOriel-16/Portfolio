@@ -1,39 +1,41 @@
 export const site = {
   name: "Oriel Alde Jr",
-  title: "Researcher & data gathering",
+  title: "Computer Science student & software developer",
   tagline:
-    "Turning field work, surveys, and conversations into clear findings teams can use—especially for products that serve real places and people.",
+    "Building clean, responsive web experiences and practical software—focused on solid fundamentals, teamwork, and delivering features people can actually use.",
   email: "orielalde9@gmail.com",
-  githubUsername: "orielalde9",
+  phone: "+639648782675",
+  githubUsername: "SenseiOriel-16",
   social: {
-    website: "",
-    linkedin: "https://www.linkedin.com/in/oriel-alde-jr",
+    instagram: "http://instagram.com/senseioriel/",
+    facebook: "https://www.facebook.com/oriel.alde.75",
+    tiktok: "https://www.tiktok.com/@senseioriel?_r=1&_t=ZS-95OeqqeMyBN",
     email: "mailto:orielalde9@gmail.com",
   },
   /** Hero column image (right on desktop). Use `/images/your-photo.jpg` in `public/images/`. Falls back to `about.portrait` if empty. */
-  heroImage: "",
+  heroImage: "/src/assets/images/profile.jpg",
   about: {
     portrait: "",
     intro:
-      "I’m Oriel. My work sits at the intersection of research and data gathering—designing questions, collecting responses in the field or online, cleaning and organizing what comes back, and summarizing it so designers and developers can build the right thing. I’ve focused much of that energy on LAkbay Camsur, a mobile app rooted in Camarines Sur, and as part of the team that helped develop the municipal website for the Local Government Unit of Camaligan.",
+      "I’m Oriel, a Computer Science student who enjoys building reliable, user-friendly software. I’ve worked on web and app projects where I contribute to layout and UI, data handling, and turning requirements into working features—often collaborating with a team and coordinating with stakeholders to keep things clear and on track.",
     highlights: [
-      "Internship with Camaligan LGU as part of the team building and improving the municipal website for residents",
-      "Structured data gathering: surveys, interviews, and field notes tied to clear research goals",
-      "Comfortable collaborating with mobile / product teams and local stakeholders",
-      "Clear written and visual summaries so decisions aren’t buried in spreadsheets",
-      "Organized, reliable follow-through from planning through reporting",
+      "Interned with Camaligan LGU as part of the team building and improving the municipal website for residents",
+      "Strong web fundamentals: layout, responsiveness, accessibility, and UI detail",
+      "Comfortable collaborating in a team setup (handoffs, updates, shared ownership)",
+      "Practical problem solving: breaking tasks down and shipping usable results",
+      "Clear communication and documentation to support teammates and stakeholders",
     ],
   },
   techChips: [
     "Web development",
-    "Field research",
-    "Survey design",
-    "Data gathering",
-    "Qualitative synthesis",
-    "Google Forms / Sheets",
-    "Interview guides",
-    "Mobile app research",
-    "Reporting & decks",
+    "UI & responsiveness",
+    "JavaScript / TypeScript",
+    "React / Next.js",
+    "API basics",
+    "Git & collaboration",
+    "Problem solving",
+    "Documentation",
+    "Accessibility",
   ],
 };
 
@@ -52,14 +54,13 @@ export const projects: Project[] = [
     id: "1",
     title: "LAkbay Camsur — mobile app",
     description:
-      "A mobile app centered on discovering and navigating Camarines Sur. I contribute as a researcher and data-gathering lead: shaping what we need to learn, running surveys and conversations with users and partners, capturing field insights, and packaging results so the product reflects how people actually move, plan trips, and use local services.",
+      "A mobile app centered on discovering and navigating Camarines Sur. I contribute with the team—supporting UI work, organizing data and content, and helping translate requirements into clear, usable screens and flows.",
     tech: [
-      "Data gathering",
-      "Field research",
-      "Surveys",
-      "User insights",
-      "Reporting",
-      "Mobile product",
+      "Mobile app",
+      "UI collaboration",
+      "Feature delivery support",
+      "Data organization",
+      "Team workflow",
     ],
     githubUrl: "mailto:orielalde9@gmail.com?subject=LAkbay%20Camsur%20%E2%80%94%20overview",
     liveUrl: "mailto:orielalde9@gmail.com?subject=LAkbay%20Camsur%20%E2%80%94%20app%20link%20%2F%20demo",
@@ -124,10 +125,10 @@ export const timeline: TimelineItem[] = [
   {
     id: "e3",
     period: "2024 — Present",
-    title: "Researcher & data gathering — LAkbay Camsur",
+    title: "Contributor — LAkbay Camsur",
     org: "LAkbay Camsur mobile app project",
     description:
-      "Research planning, data collection in the field and online, coordination with partners, and reporting that informs the mobile product roadmap for Camarines Sur.",
+      "Contributing to app work with the team—helping organize data/content, support UI tasks, and coordinate requirements so features are clear and implementable.",
     type: "work",
   },
   {
@@ -142,26 +143,25 @@ export const timeline: TimelineItem[] = [
 ];
 
 export const skillCategories = {
-  Research: [
-    { name: "Field & survey data gathering", value: 92 },
-    { name: "Interviews & qualitative synthesis", value: 88 },
-    { name: "Data cleaning, tables & basic analysis", value: 80 },
+  "Programming fundamentals": [
+    { name: "JavaScript / TypeScript", value: 86 },
+    { name: "Data structures & problem solving", value: 80 },
+    { name: "Debugging & code reading", value: 82 },
   ],
-  Communication: [
-    { name: "Research reports & memos", value: 90 },
-    { name: "Presentations for teams & stakeholders", value: 86 },
-    { name: "Plain-language summaries", value: 85 },
+  "Web development": [
+    { name: "Responsive UI (layout & components)", value: 88 },
+    { name: "React / Next.js basics", value: 82 },
+    { name: "API integration (REST, fetch)", value: 78 },
   ],
-  "Product & collaboration": [
-    { name: "Working with designers & developers", value: 84 },
-    { name: "Research ops (schedules, trackers, consent)", value: 82 },
-    { name: "Mobile / app user research basics", value: 78 },
+  "Tools & workflow": [
+    { name: "Git (branches, PRs, collaboration)", value: 84 },
+    { name: "Build tooling & package managers", value: 76 },
+    { name: "Documentation & handoffs", value: 82 },
   ],
-  Tools: [
-    { name: "Sheets / Forms / Docs", value: 90 },
-    { name: "Web basics (HTML, CSS, site structure)", value: 82 },
-    { name: "Notion or similar", value: 78 },
-    { name: "Slides & simple charts", value: 85 },
+  "Team & communication": [
+    { name: "Clear updates & coordination", value: 86 },
+    { name: "Working with stakeholders", value: 78 },
+    { name: "Delivering on deadlines", value: 82 },
   ],
 } as const;
 

@@ -118,8 +118,13 @@ export function Contact() {
                 {site.social.website.trim() ? (
                   <SocialLink href={site.social.website} label="Website" />
                 ) : null}
-                <SocialLink href={site.social.linkedin} label="LinkedIn" />
-                <SocialLink href={site.social.email} label="Email" />
+                {site.social.messenger.trim() ? (
+                  <SocialLink href={site.social.messenger} label="Messenger" />
+                ) : null}
+                {site.social.instagram.trim() ? (
+                  <SocialLink href={site.social.instagram} label="Instagram" />
+                ) : null}
+                {site.phone.trim() ? <SocialLink href={`tel:${site.phone}`} label="Phone" /> : null}
               </ul>
             </GlassCard>
           </motion.div>

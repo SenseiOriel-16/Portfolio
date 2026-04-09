@@ -17,7 +17,7 @@ export function Skills() {
         <SectionHeading
           eyebrow="Capabilities"
           title="Skills"
-          subtitle="Where I’m strongest in research, communication, and collaboration."
+          subtitle="Core computer science fundamentals, development skills, and teamwork."
         />
 
         <div className="grid gap-6 md:grid-cols-2">
