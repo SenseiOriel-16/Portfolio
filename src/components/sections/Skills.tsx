@@ -17,7 +17,7 @@ export function Skills() {
         <SectionHeading
           eyebrow="Capabilities"
           title="Skills"
-          subtitle="Core computer science fundamentals, development skills, and teamwork."
+          subtitle="Transferable strengths first—plus technical skills when the role needs them."
         />
 
         <div className="grid gap-6 md:grid-cols-2">

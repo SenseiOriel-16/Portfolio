@@ -34,7 +34,7 @@ export function About() {
         <SectionHeading
           eyebrow="About"
           title="A little about me"
-          subtitle="Background, how I work, and the tools I use most."
+          subtitle="CS-trained, open-minded about roles—what I bring is consistency, clarity, and adaptability."
         />
 
         <div className="grid gap-8 lg:grid-cols-5">
@@ -87,7 +87,7 @@ export function About() {
                 </div>
               ) : null}
               <h3 className="text-sm font-medium uppercase tracking-wider text-accent">
-                Tools & strengths
+                Strengths at a glance
               </h3>
               <div className="mt-4 flex flex-wrap gap-2">
                 {site.techChips.map((chip, i) => (
@@ -110,9 +110,9 @@ export function About() {
                   Focus areas
                 </p>
                 {[
-                  { label: "Data gathering & field work", value: 92 },
-                  { label: "Research reporting", value: 88 },
-                  { label: "Stakeholder collaboration", value: 84 },
+                  { label: "Organization & follow-through", value: 90 },
+                  { label: "Clear communication", value: 88 },
+                  { label: "Teamwork & service mindset", value: 86 },
                 ].map((bar) => (
                   <div key={bar.label}>
                     <div className="mb-1 flex justify-between text-xs text-foreground/60">

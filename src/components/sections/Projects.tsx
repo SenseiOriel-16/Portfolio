@@ -1,9 +1,9 @@
-import { projects, site } from "@/data/site";
+import { projects } from "@/data/site";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { GitHubProjectGrid } from "./GitHubProjectGrid";
+// import { GitHubProjectGrid } from "./GitHubProjectGrid";
 import { ProjectCard } from "./ProjectCard";
 
-/** Featured project cards plus optional GitHub-powered row */
+/** Featured project cards (GitHub grid disabled) */
 export function Projects() {
   return (
     <section id="projects" className="scroll-mt-28 px-4 py-24 sm:px-6 lg:px-8">
@@ -20,7 +20,7 @@ export function Projects() {
           ))}
         </div>
 
-        <GitHubProjectGrid username={site.githubUsername} />
+        {/* <GitHubProjectGrid username={site.githubUsername} /> */}
       </div>
     </section>
   );
