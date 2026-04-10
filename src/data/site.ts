@@ -7,15 +7,17 @@ export const site = {
   phone: "+639648782675",
   githubUsername: "SenseiOriel-16",
   social: {
+    website: "",
+    messenger: "",
     instagram: "http://instagram.com/senseioriel/",
     facebook: "https://www.facebook.com/oriel.alde.75",
     tiktok: "https://www.tiktok.com/@senseioriel?_r=1&_t=ZS-95OeqqeMyBN",
     email: "mailto:orielalde9@gmail.com",
   },
   /** Hero column image (right on desktop). Use `/images/your-photo.jpg` in `public/images/`. Falls back to `about.portrait` if empty. */
-  heroImage: "/public/images/profile.jpg",
+  heroImage: "/profile.jpg",
   about: {
-    portrait: "/public/images/profile.jpg",
+    portrait: "/profile.jpg",
     intro:
       "I’m Oriel, a Computer Science student who enjoys building reliable, user-friendly software. I’ve worked on web and app projects where I contribute to layout and UI, data handling, and turning requirements into working features—often collaborating with a team and coordinating with stakeholders to keep things clear and on track.",
     highlights: [
@@ -124,21 +126,12 @@ export const timeline: TimelineItem[] = [
   },
   {
     id: "e3",
-    period: "2024 — Present",
+    period: "2024 — 2026",
     title: "Contributor — LAkbay Camsur",
     org: "LAkbay Camsur mobile app project",
     description:
       "Contributing to app work with the team—helping organize data/content, support UI tasks, and coordinate requirements so features are clear and implementable.",
     type: "work",
-  },
-  {
-    id: "e4",
-    period: "2023",
-    title: "Leadership & communications intensive",
-    org: "Professional development program",
-    description:
-      "Facilitation, public speaking, and collaborative planning with peers from mixed sectors.",
-    type: "program",
   },
 ];
 
