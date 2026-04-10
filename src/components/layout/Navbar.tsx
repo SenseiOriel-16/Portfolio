@@ -14,9 +14,31 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeHref, setActiveHref] = useState<string | null>(null);
   const { scrollY } = useScroll();
 
   useEffect(() => setMounted(true), []);
+
+  useEffect(() => {
+    const updateActive = () => {
+      const trigger = window.innerHeight * 0.36;
+      let current: string | null = null;
+      for (const link of navLinks) {
+        const el = document.querySelector(link.href);
+        if (!el) continue;
+        const top = el.getBoundingClientRect().top;
+        if (top <= trigger) current = link.href;
+      }
+      setActiveHref(current);
+    };
+    updateActive();
+    window.addEventListener("scroll", updateActive, { passive: true });
+    window.addEventListener("resize", updateActive, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", updateActive);
+      window.removeEventListener("resize", updateActive);
+    };
+  }, []);
 
   useMotionValueEvent(scrollY, "change", (y) => {
     setScrolled(y > 24);
@@ -70,28 +92,36 @@ export function Navbar() {
           </MotionLink>
 
           <ul className="hidden items-center gap-0.5 md:flex">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <motion.button
-                  type="button"
-                  onClick={() => scrollTo(link.href)}
-                  className="group relative px-3 py-2 text-sm text-foreground/70 transition-colors hover:text-foreground"
-                  whileHover={{ y: -2 }}
-                  whileTap={{ scale: 0.96 }}
-                  transition={{ type: "spring", stiffness: 420, damping: 22 }}
-                >
-                  <span className="relative z-10">{link.label}</span>
-                  <span
-                    className="absolute inset-x-2 bottom-1 h-0.5 origin-center scale-x-0 rounded-full bg-accent/90 transition-transform duration-200 ease-out group-hover:scale-x-100"
-                    aria-hidden
-                  />
-                  <span
-                    className="absolute inset-0 -z-0 rounded-lg bg-white/0 transition-colors duration-200 group-hover:bg-white/10 dark:group-hover:bg-white/[0.07]"
-                    aria-hidden
-                  />
-                </motion.button>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = activeHref === link.href;
+              return (
+                <li key={link.href}>
+                  <motion.button
+                    type="button"
+                    onClick={() => scrollTo(link.href)}
+                    aria-current={isActive ? "true" : undefined}
+                    className={`group relative px-3 py-2 text-sm transition-colors hover:text-foreground ${
+                      isActive ? "text-accent" : "text-foreground/70"
+                    }`}
+                    whileHover={{ y: -2 }}
+                    whileTap={{ scale: 0.96 }}
+                    transition={{ type: "spring", stiffness: 420, damping: 22 }}
+                  >
+                    <span className="relative z-10">{link.label}</span>
+                    <span
+                      className={`absolute inset-x-2 bottom-1 h-0.5 origin-center rounded-full bg-accent/90 transition-transform duration-200 ease-out ${
+                        isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                      }`}
+                      aria-hidden
+                    />
+                    <span
+                      className="absolute inset-0 -z-0 rounded-lg bg-white/0 transition-colors duration-200 group-hover:bg-white/10 dark:group-hover:bg-white/[0.07]"
+                      aria-hidden
+                    />
+                  </motion.button>
+                </li>
+              );
+            })}
           </ul>
 
           <div className="flex items-center gap-2">
@@ -136,17 +166,24 @@ export function Navbar() {
               className="mx-auto mt-2 max-w-6xl rounded-2xl border border-white/15 bg-background/80 p-4 shadow-2xl backdrop-blur-2xl backdrop-saturate-150 dark:border-white/10 dark:bg-background/75 md:hidden"
             >
               <ul className="flex flex-col gap-1">
-                {navLinks.map((link) => (
+                {navLinks.map((link) => {
+                  const isActive = activeHref === link.href;
+                  return (
                   <li key={link.href}>
                     <motion.button
                       type="button"
-                      className="group relative w-full rounded-lg px-3 py-3 text-left text-sm text-foreground/80 transition-colors hover:text-foreground"
+                      className={`group relative w-full rounded-lg px-3 py-3 text-left text-sm transition-colors hover:text-foreground ${
+                        isActive ? "text-accent" : "text-foreground/80"
+                      }`}
                       onClick={() => scrollTo(link.href)}
+                      aria-current={isActive ? "true" : undefined}
                       whileTap={{ scale: 0.98 }}
                     >
                       <span className="relative z-10">{link.label}</span>
                       <span
-                        className="absolute inset-y-1 left-0 w-0.5 origin-top scale-y-0 rounded-full bg-accent transition-transform duration-200 group-hover:scale-y-100"
+                        className={`absolute inset-y-1 left-0 w-0.5 origin-top rounded-full bg-accent transition-transform duration-200 ${
+                          isActive ? "scale-y-100" : "scale-y-0 group-hover:scale-y-100"
+                        }`}
                         aria-hidden
                       />
                       <span
@@ -155,7 +192,8 @@ export function Navbar() {
                       />
                     </motion.button>
                   </li>
-                ))}
+                  );
+                })}
               </ul>
             </motion.div>
           )}

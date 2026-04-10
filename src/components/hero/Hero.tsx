@@ -96,6 +96,18 @@ export function Hero() {
             >
               Contact
             </motion.button>
+            {site.resumeUrl?.trim() ? (
+              <motion.a
+                href={site.resumeUrl.trim()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex rounded-xl border border-foreground/15 bg-foreground/[0.03] px-6 py-3 text-sm font-medium text-foreground/90 transition hover:border-accent/35 hover:text-accent dark:border-white/10 dark:bg-white/[0.04]"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Resume
+              </motion.a>
+            ) : null}
           </motion.div>
 
           <motion.div

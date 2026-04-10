@@ -9,6 +9,17 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 /** Form submits via mailto: — opens the visitor’s mail app addressed to site.email (Gmail). */
 export function Contact() {
   const [sent, setSent] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(site.email);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2200);
+    } catch {
+      /* ignore */
+    }
+  };
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -118,8 +129,17 @@ export function Contact() {
               <p className="mt-2 text-sm text-foreground/65">
                 Gmail, phone, or Facebook—pick what works for you.
               </p>
-              <ul className="mt-6 flex flex-wrap gap-3">
+              <ul className="mt-6 flex flex-wrap items-center gap-3">
                 <SocialLink href={`mailto:${site.email}`} label="Gmail" />
+                <motion.button
+                  type="button"
+                  onClick={copyEmail}
+                  className="rounded-xl border border-white/10 bg-surface/40 px-5 py-3 text-sm font-medium text-foreground transition hover:border-accent/40 hover:text-accent dark:border-white/10"
+                  whileHover={{ scale: 1.03, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {copied ? "Copied!" : "Copy email"}
+                </motion.button>
                 {site.phone.trim() ? (
                   <SocialLink href={`tel:${site.phone.replace(/\s/g, "")}`} label="Phone" />
                 ) : null}

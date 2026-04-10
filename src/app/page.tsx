@@ -1,3 +1,4 @@
+import { BackToTop } from "@/components/effects/BackToTop";
 import { CursorGlow } from "@/components/effects/CursorGlow";
 import { LoadingScreen } from "@/components/effects/LoadingScreen";
 import { Hero } from "@/components/hero/Hero";
@@ -23,6 +24,7 @@ export default function HomePage() {
         Skip to content
       </a>
       <CursorGlow />
+      <BackToTop />
       <Navbar />
       <main className="relative z-10">
         <Hero />
