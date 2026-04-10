@@ -5,8 +5,8 @@ export const site = {
     "I’m finishing a Computer Science degree, but I don’t box myself into one lane. I’m happy in tech when it fits, and I’m just as motivated in coordination, service, documentation, field-facing work, or whatever the role needs—organized, dependable, and quick to learn.",
   email: "orielalde9@gmail.com",
   phone: "+639648782675",
-  /** Optional: PDF in `public/` e.g. `/resume.pdf` — shows a Resume button in the hero when set. */
-  resumeUrl: "",
+  /** PDF served from `public/` — Resume button in hero + footer when set. Not a file:// path (won’t work on the web). */
+  resumeUrl: "/cv-oriel.pdf",
   githubUsername: "SenseiOriel-16",
   social: {
     website: "",

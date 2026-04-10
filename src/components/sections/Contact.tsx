@@ -129,6 +129,19 @@ export function Contact() {
               <p className="mt-2 text-sm text-foreground/65">
                 Gmail, phone, or Facebook—pick what works for you.
               </p>
+              {site.resumeUrl?.trim() ? (
+                <p className="mt-4">
+                  <a
+                    href={site.resumeUrl.trim()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                    className="text-sm font-medium text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent"
+                  >
+                    Download CV (PDF)
+                  </a>
+                </p>
+              ) : null}
               <ul className="mt-6 flex flex-wrap items-center gap-3">
                 <SocialLink href={`mailto:${site.email}`} label="Gmail" />
                 <motion.button

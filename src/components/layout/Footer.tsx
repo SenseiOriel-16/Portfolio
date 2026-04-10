@@ -17,6 +17,18 @@ export function Footer() {
               </a>
             </li>
           ))}
+          {site.resumeUrl?.trim() ? (
+            <li>
+              <a
+                href={site.resumeUrl.trim()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-accent"
+              >
+                Resume
+              </a>
+            </li>
+          ) : null}
         </ul>
       </div>
     </footer>
