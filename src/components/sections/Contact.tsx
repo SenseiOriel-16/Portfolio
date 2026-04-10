@@ -6,7 +6,7 @@ import { site } from "@/data/site";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
-/** Contact form opens the visitor’s mail client with a prefilled message. */
+/** Form submits via mailto: — opens the visitor’s mail app addressed to site.email (Gmail). */
 export function Contact() {
   const [sent, setSent] = useState(false);
 
@@ -33,7 +33,7 @@ export function Contact() {
         <SectionHeading
           eyebrow="Let’s talk"
           title="Contact"
-          subtitle="Reach out for opportunities, collaborations, or just to say hello."
+          subtitle="Reach me on Gmail, by phone, or on Facebook—or send a message below and it goes straight to my Gmail."
         />
 
         <div className="grid gap-8 lg:grid-cols-2">
@@ -44,6 +44,10 @@ export function Contact() {
             transition={{ duration: 0.45 }}
           >
             <GlassCard className="p-6 sm:p-8">
+              <p className="mb-4 text-sm text-foreground/65">
+                Messages are sent directly to{" "}
+                <span className="font-medium text-foreground">{site.email}</span> using your email app.
+              </p>
               <form onSubmit={onSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="mb-1 block text-sm text-foreground/70">
@@ -60,7 +64,7 @@ export function Contact() {
                 </div>
                 <div>
                   <label htmlFor="email" className="mb-1 block text-sm text-foreground/70">
-                    Email
+                    Your email (for my reply)
                   </label>
                   <input
                     id="email"
@@ -91,11 +95,11 @@ export function Contact() {
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.99 }}
                 >
-                  Send message
+                  Send to Gmail
                 </motion.button>
                 {sent && (
                   <p className="text-center text-sm text-accent" role="status">
-                    Opening your email app…
+                    Opening your email app to {site.email}…
                   </p>
                 )}
               </form>
@@ -110,21 +114,18 @@ export function Contact() {
             transition={{ duration: 0.45 }}
           >
             <GlassCard className="p-6 sm:p-8">
-              <h3 className="text-lg font-semibold text-foreground">Connect</h3>
+              <h3 className="text-lg font-semibold text-foreground">Contact me</h3>
               <p className="mt-2 text-sm text-foreground/65">
-                Prefer another channel? Use the links below.
+                Gmail, phone, or Facebook—pick what works for you.
               </p>
               <ul className="mt-6 flex flex-wrap gap-3">
-                {site.social.website.trim() ? (
-                  <SocialLink href={site.social.website} label="Website" />
+                <SocialLink href={`mailto:${site.email}`} label="Gmail" />
+                {site.phone.trim() ? (
+                  <SocialLink href={`tel:${site.phone.replace(/\s/g, "")}`} label="Phone" />
                 ) : null}
-                {site.social.messenger.trim() ? (
-                  <SocialLink href={site.social.messenger} label="Messenger" />
+                {site.social.facebook.trim() ? (
+                  <SocialLink href={site.social.facebook} label="Facebook" />
                 ) : null}
-                {site.social.instagram.trim() ? (
-                  <SocialLink href={site.social.instagram} label="Instagram" />
-                ) : null}
-                {site.phone.trim() ? <SocialLink href={`tel:${site.phone}`} label="Phone" /> : null}
               </ul>
             </GlassCard>
           </motion.div>
