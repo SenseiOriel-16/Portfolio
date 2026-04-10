@@ -54,7 +54,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "1",
-    title: "LAkbay Camsur — mobile app",
+    title: "Lakbay CamSur — mobile app",
     description:
       "A mobile app centered on discovering and navigating Camarines Sur. I work with the team on whatever moves the product forward—organizing information, supporting screens and flows, and keeping requirements understandable for everyone involved.",
     tech: [
@@ -64,8 +64,8 @@ export const projects: Project[] = [
       "Mobile product support",
       "Stakeholder-friendly delivery",
     ],
-    githubUrl: "mailto:orielalde9@gmail.com?subject=LAkbay%20Camsur%20%E2%80%94%20overview",
-    liveUrl: "mailto:orielalde9@gmail.com?subject=LAkbay%20Camsur%20%E2%80%94%20app%20link%20%2F%20demo",
+    githubUrl: "mailto:orielalde9@gmail.com?subject=Lakbay%20CamSur%20%E2%80%94%20overview",
+    liveUrl: "mailto:orielalde9@gmail.com?subject=Lakbay%20CamSur%20%E2%80%94%20app%20link%20%2F%20demo",
   },
   {
     id: "2",
@@ -117,7 +117,7 @@ export const timeline: TimelineItem[] = [
   },
   {
     id: "e2",
-    period: "2025",
+    period: "2026",
     title: "Intern — municipal web & public information",
     org: "Local Government Unit of Camaligan",
     description:
@@ -127,8 +127,8 @@ export const timeline: TimelineItem[] = [
   {
     id: "e3",
     period: "2024 — 2026",
-    title: "Contributor — LAkbay Camsur",
-    org: "LAkbay Camsur mobile app project",
+    title: "Contributor — Lakbay CamSur",
+    org: "Lakbay CamSur mobile app project",
     description:
       "Supporting the app with the team—organizing content and data, helping keep requirements clear, and pitching in on UI and delivery tasks as needed.",
     type: "work",
