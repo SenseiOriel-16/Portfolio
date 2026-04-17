@@ -156,8 +156,17 @@ export function Contact() {
                 {site.phone.trim() ? (
                   <SocialLink href={`tel:${site.phone.replace(/\s/g, "")}`} label="Phone" />
                 ) : null}
+                {site.social.messenger.trim() ? (
+                  <SocialLink href={site.social.messenger} label="Messenger" />
+                ) : null}
                 {site.social.facebook.trim() ? (
                   <SocialLink href={site.social.facebook} label="Facebook" />
+                ) : null}
+                {site.social.instagram.trim() ? (
+                  <SocialLink href={site.social.instagram} label="Instagram" />
+                ) : null}
+                {site.social.tiktok.trim() ? (
+                  <SocialLink href={site.social.tiktok} label="TikTok" />
                 ) : null}
               </ul>
             </GlassCard>
@@ -169,11 +178,12 @@ export function Contact() {
 }
 
 function SocialLink({ href, label }: { href: string; label: string }) {
+  const isInPlace = href.startsWith("mailto:") || href.startsWith("tel:");
   return (
     <motion.a
       href={href}
-      target={href.startsWith("mailto:") ? undefined : "_blank"}
-      rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+      target={isInPlace ? undefined : "_blank"}
+      rel={isInPlace ? undefined : "noopener noreferrer"}
       className="rounded-xl border border-white/10 bg-surface/40 px-5 py-3 text-sm font-medium text-foreground transition hover:border-accent/40 hover:text-accent dark:border-white/10"
       whileHover={{ scale: 1.03, y: -2 }}
       whileTap={{ scale: 0.98 }}

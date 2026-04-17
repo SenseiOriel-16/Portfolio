@@ -10,7 +10,7 @@ export const site = {
   githubUsername: "SenseiOriel-16",
   social: {
     website: "",
-    messenger: "",
+    messenger: "https://m.me/oriel.alde.75",
     instagram: "http://instagram.com/senseioriel/",
     facebook: "https://www.facebook.com/oriel.alde.75",
     tiktok: "https://www.tiktok.com/@senseioriel?_r=1&_t=ZS-95OeqqeMyBN",
@@ -48,15 +48,15 @@ export type Project = {
   title: string;
   description: string;
   tech: string[];
-  githubUrl: string;
-  liveUrl: string;
+  overviewUrl: string;
+  visitUrl: string;
   image?: string;
 };
 
 export const projects: Project[] = [
   {
     id: "1",
-    title: "Lakbay CamSur — mobile app",
+    title: "Destinaph — mobile app",
     description:
       "A mobile app centered on discovering and navigating Camarines Sur. I work with the team on whatever moves the product forward—organizing information, supporting screens and flows, and keeping requirements understandable for everyone involved.",
     tech: [
@@ -66,8 +66,8 @@ export const projects: Project[] = [
       "Mobile product support",
       "Stakeholder-friendly delivery",
     ],
-    githubUrl: "mailto:orielalde9@gmail.com?subject=Lakbay%20CamSur%20%E2%80%94%20overview",
-    liveUrl: "mailto:orielalde9@gmail.com?subject=Lakbay%20CamSur%20%E2%80%94%20app%20link%20%2F%20demo",
+    overviewUrl: "https://www.camsur.com/tourism",
+    visitUrl: "https://www.camsur.com/tourism",
   },
   {
     id: "2",
@@ -75,8 +75,8 @@ export const projects: Project[] = [
     description:
       "I was part of the project team that developed the LGU’s municipal website in Camaligan, Camarines Sur—working with others on layout, pages, and structure so citizens can find services and announcements more easily. Mix of technical tasks and plain teamwork with LGU staff.",
     tech: ["Public-sector collaboration", "Web & layout support", "Team delivery", "Clear information design"],
-    githubUrl: "mailto:orielalde9@gmail.com?subject=Camaligan%20LGU%20website%20%E2%80%94%20overview",
-    liveUrl: "mailto:orielalde9@gmail.com?subject=Camaligan%20LGU%20%E2%80%94%20site%20link",
+    overviewUrl: "https://camaligan.gov.ph/",
+    visitUrl: "https://camaligan.gov.ph/",
   },
   {
     id: "3",
@@ -84,8 +84,8 @@ export const projects: Project[] = [
     description:
       "A responsive personal site that brings together profile, selected work, and contact in one place—structured for clarity on any device.",
     tech: ["Web", "UX writing", "Information layout", "Accessibility"],
-    githubUrl: "mailto:orielalde9@gmail.com?subject=Portfolio%20website%20%E2%80%94%20overview",
-    liveUrl: "mailto:orielalde9@gmail.com?subject=Portfolio%20website%20%E2%80%94%20live%20link",
+    overviewUrl: "https://github.com/SenseiOriel-16/Portfolio",
+    visitUrl: "https://github.com/SenseiOriel-16/Portfolio",
   },
   // {
   //   id: "4",
@@ -93,8 +93,8 @@ export const projects: Project[] = [
   //   description:
   //     "Slide decks, one-pagers, and appendix materials that translate raw inputs into themes, priorities, and next steps for decision-makers—available on request with appropriate context.",
   //   tech: ["Synthesis", "Documentation", "Visualization", "Stakeholder comms"],
-  //   githubUrl: "mailto:orielalde9@gmail.com?subject=Research%20samples%20request",
-  //   liveUrl: "https://www.linkedin.com/in/oriel-alde-jr",
+  //   overviewUrl: "mailto:orielalde9@gmail.com?subject=Research%20samples%20request",
+  //   visitUrl: "https://www.linkedin.com/in/oriel-alde-jr",
   // },
 ];
 
@@ -120,7 +120,7 @@ export const timeline: TimelineItem[] = [
   {
     id: "e2",
     period: "2026",
-    title: "Intern — municipal web & public information",
+    title: "Intern",
     org: "Local Government Unit of Camaligan",
     description:
       "Internship as part of the team developing the municipal website—shared responsibility for pages and layout, organizing public-facing information with colleagues, coordinating with LGU staff on content and updates, and keeping the site clear and usable for residents.",
@@ -129,8 +129,8 @@ export const timeline: TimelineItem[] = [
   {
     id: "e3",
     period: "2024 — 2026",
-    title: "Contributor — Lakbay CamSur",
-    org: "Lakbay CamSur mobile app project",
+    title: "Contributor — DestinaPh",
+    org: "DestinaPh mobile app project",
     description:
       "Supporting the app with the team—organizing content and data, helping keep requirements clear, and pitching in on UI and delivery tasks as needed.",
     type: "work",

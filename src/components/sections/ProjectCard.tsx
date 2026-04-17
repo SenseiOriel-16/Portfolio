@@ -98,7 +98,7 @@ export function ProjectCard({ project, index }: Props) {
 
             <div className="mt-6 flex flex-wrap gap-3 opacity-100 transition md:opacity-0 md:group-hover:opacity-100">
               <motion.a
-                href={project.githubUrl}
+                href={project.overviewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-lg border border-white/15 bg-surface-muted/50 px-4 py-2 text-sm font-medium text-foreground transition hover:border-accent/40 hover:text-accent dark:border-white/10"
@@ -108,7 +108,7 @@ export function ProjectCard({ project, index }: Props) {
                 Overview
               </motion.a>
               <motion.a
-                href={project.liveUrl}
+                href={project.visitUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white shadow-md shadow-accent/20 transition hover:bg-accent-dim"
